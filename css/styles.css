@@ -14,7 +14,49 @@ img {
 
 body {
   font-family: Kumbh Sans, sans-serif;
-  max-width: 765px;
+  position: relative;
+}
+
+.mobile-wrapper {
+  background-color: rgba(0, 0, 0, 0.664);
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.mobile {
+  position: absolute;
+  z-index: 2;
+  background-color: white;
+  height: 100vh;
+  width: 65%;
+  padding: 1.8rem 1.5rem;
+  transform: translateX(-100%);
+  transition: transform 0.8s ease-in-out;
+}
+
+.mobile .mobile__img {
+  width: 16px;
+  cursor: pointer;
+}
+
+.mobile .mobile__list {
+  margin-top: 3.5rem;
+  list-style-type: none;
+  font-weight: 700;
+  color: #1d2025;
+}
+
+.mobile .mobile__list li {
+  margin-top: 1.8rem;
+  font-size: 1.2rem;
+}
+
+.mobile__active {
+  transform: translate(0%);
 }
 
 .header {
@@ -29,12 +71,33 @@ body {
   margin-left: 1rem;
 }
 
+.header #header__hamb {
+  cursor: pointer;
+}
+
 .header .header__logo {
   margin-left: 0.7rem;
 }
 
 .producto .carrousel {
+  user-select: none;
   position: relative;
+  overflow: hidden;
+}
+
+.producto .carrousel .carrousel__img {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+  transition-delay: 200ms;
+}
+
+.producto .carrousel .active {
+  position: relative;
+  opacity: 1;
+  transition-delay: 0ms;
+  visibility: visible;
 }
 
 .producto .carrousel .carrousel__controls {
@@ -61,6 +124,14 @@ body {
 .producto .carrousel .carrousel__controls .carrousel__boton {
   height: 0.8rem;
   width: 0.65rem;
+}
+
+.producto .carrousel .carrousel__controls #carrousel__prev {
+  cursor: pointer;
+}
+
+.producto .carrousel .carrousel__controls #carrousel__next {
+  cursor: pointer;
 }
 
 .producto .producto__info {
@@ -132,8 +203,23 @@ body {
   margin-top: 1.5rem;
 }
 
+.producto .producto__info .producto__cantidad div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  transition: 0.2s all;
+  cursor: pointer;
+}
+
 .producto .producto__info .producto__cantidad .producto__cantidad--minus {
   width: 0.8rem;
+}
+
+.producto .producto__info .producto__cantidad div:hover {
+  transform: scale(1.3);
+  transition: 0.2s all;
 }
 
 .producto .producto__info .producto__boton {
