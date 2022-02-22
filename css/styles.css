@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+/*   ### Primary   */
+/*   ### Neutral   */
+/*(with 75% opacity for lightbox background)*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: Kumbh Sans, sans-serif;
+  max-width: 765px;
+}
+
+.header {
+  display: flex;
+  padding: 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .header__profile {
+  height: 1.5rem;
+  margin-left: 1rem;
+}
+
+.header .header__logo {
+  margin-left: 0.7rem;
+}
+
+.producto .carrousel {
+  position: relative;
+}
+
+.producto .carrousel .carrousel__controls {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2rem;
+}
+
+.producto .carrousel .carrousel__controls div {
+  background-color: white;
+  border-radius: 50%;
+  width: 42px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.producto .carrousel .carrousel__controls .carrousel__boton {
+  height: 0.8rem;
+  width: 0.65rem;
+}
+
+.producto .producto__info {
+  padding: 1.2rem;
+}
+
+.producto .producto__info .producto__company {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #ff7d1a;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+
+.producto .producto__info .producto__title {
+  margin-top: 0.7rem;
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
+
+.producto .producto__info .producto__desc {
+  margin-top: 1rem;
+  color: #68707d;
+  font-size: 15px;
+  line-height: 1.5;
+  letter-spacing: 0.1px;
+}
+
+.producto .producto__info .producto__precio {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.producto .producto__info .producto__precio div {
+  display: flex;
+  align-items: center;
+}
+
+.producto .producto__info .producto__precio .producto__precioAct {
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.producto .producto__info .producto__precio .producto__descuento {
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  height: 100%;
+  font-weight: 700;
+  background-color: #ffede0;
+  color: #ff7d1a;
+  margin-left: 1rem;
+}
+
+.producto .producto__info .producto__precio .producto__precAnterior {
+  color: #b6bcc8;
+  text-decoration: line-through;
+}
+
+.producto .producto__info .producto__cantidad {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  padding: 1.2rem;
+  background-color: #f7f8fd;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+}
+
+.producto .producto__info .producto__cantidad .producto__cantidad--minus {
+  width: 0.8rem;
+}
+
+.producto .producto__info .producto__boton {
+  padding: 1.2rem;
+  outline: none;
+  border: none;
+  background-color: #ff7d1a;
+  border-radius: 10px;
+  margin-top: 1rem;
+  width: 100%;
+  color: white;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(255, 125, 26, 0.787) 0px 18px 25px -10px;
+}
+
+.producto .producto__info .producto__boton span {
+  margin-left: 1rem;
+  font-size: 16px;
+  font-family: inherit;
+  position: relative;
+  bottom: -2px;
+}
+/*# sourceMappingURL=styles.css.map */
