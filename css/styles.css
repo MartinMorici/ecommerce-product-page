@@ -182,6 +182,7 @@ body {
 
 .header #header__hamb {
   cursor: pointer;
+  user-select: none;
 }
 
 .header .header__logo {
@@ -198,6 +199,10 @@ body {
   position: relative;
   top: 3px;
   cursor: pointer;
+  user-select: none;
+}
+
+.header .header__carrito svg {
   user-select: none;
 }
 
@@ -266,10 +271,22 @@ body {
 
 .producto .carrousel .carrousel__controls #carrousel__prev {
   cursor: pointer;
+  user-select: none;
 }
 
 .producto .carrousel .carrousel__controls #carrousel__next {
   cursor: pointer;
+  user-select: none;
+}
+
+.producto .carrousel .carrousel__controls #carrousel__next img {
+  cursor: pointer;
+  user-select: none;
+}
+
+.producto .carrousel .carrousel__controls #carrousel__prev img {
+  cursor: pointer;
+  user-select: none;
 }
 
 .producto .producto__info {

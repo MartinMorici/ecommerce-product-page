@@ -51,6 +51,7 @@ body {
 
    #header__hamb {
       cursor: pointer;
+      user-select: none;
    }
    .header__logo {
       margin-left: 0.7rem;
@@ -64,6 +65,9 @@ body {
       position: relative;
       top: 3px;
       cursor: pointer;
+      user-select: none;
+   }
+   .header__carrito svg {
       user-select: none;
    }
    .header__carrito__num {
@@ -123,9 +127,19 @@ body {
          }
          #carrousel__prev {
             cursor: pointer;
+            user-select: none;
          }
          #carrousel__next {
             cursor: pointer;
+            user-select: none;
+         }
+         #carrousel__next img {
+            cursor: pointer;
+            user-select: none;
+         }
+         #carrousel__prev img {
+            cursor: pointer;
+            user-select: none;
          }
       }
    }
