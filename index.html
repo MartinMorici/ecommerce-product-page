@@ -9,89 +9,132 @@
       <title>Frontend Mentor | E-commerce product page</title>
    </head>
    <body>
-      <div class="mobile-wrapper" id="mobile__wrapper">
-         <nav class="mobile" id="mobile">
-            <img id="mobile__close" class="mobile__img" src="./images/icon-close.svg" alt="" />
-            <ul class="mobile__list">
-               <li>Collections</li>
-               <li>Men</li>
-               <li>Women</li>
-               <li>About</li>
-               <li>Contact</li>
-            </ul>
-         </nav>
-      </div>
-
-      <header class="header">
-         <div>
-            <img src="./images/icon-menu.svg" id="header__hamb" alt="Menú Hamburguesa" />
-            <img class="header__logo" src="./images/logo.svg" alt="Logo" />
+      <div class="wrapper">
+         <div class="mobile-wrapper" id="mobile__wrapper">
+            <nav class="mobile" id="mobile">
+               <img id="mobile__close" class="mobile__img" src="./images/icon-close.svg" alt="" />
+               <ul class="mobile__list">
+                  <li>Collections</li>
+                  <li>Men</li>
+                  <li>Women</li>
+                  <li>About</li>
+                  <li>Contact</li>
+               </ul>
+            </nav>
          </div>
-         <div>
-            <img src="./images/icon-cart.svg" alt="Carrito de Compras" />
-            <img class="header__profile" src="./images/image-avatar.png" alt="Imagen de Perfil" />
-         </div>
-      </header>
-
-      <main class="producto">
-         <div class="carrousel">
-            <img class="carrousel__img active" src="./images/image-product-1.jpg" alt="" />
-            <img class="carrousel__img" src="./images/image-product-2.jpg" alt="" />
-            <img class="carrousel__img" src="./images/image-product-3.jpg" alt="" />
-            <img class="carrousel__img" src="./images/image-product-4.jpg" alt="" />
-            <div class="carrousel__controls">
-               <div id="carrousel__prev">
-                  <img class="carrousel__boton" src="./images/icon-previous.svg" alt="" />
-               </div>
-               <div id="carrousel__next">
-                  <img class="carrousel__boton" src="./images/icon-next.svg" alt="" />
-               </div>
+         <header class="header">
+            <div class="header__izquierda">
+               <img src="./images/icon-menu.svg" id="header__hamb" alt="Menú Hamburguesa" />
+               <img class="header__logo" src="./images/logo.svg" alt="Logo" />
+               <nav>
+                  <ul class="header__menu">
+                     <li>Collections</li>
+                     <li>Men</li>
+                     <li>Women</li>
+                     <li>About</li>
+                     <li>Contact</li>
+                  </ul>
+               </nav>
             </div>
-         </div>
-
-         <div class="producto__info">
-            <span class="producto__company">Sneaker Company</span>
-            <h1 class="producto__title">Fall Limited Edition Sneakers</h1>
-            <p class="producto__desc">
-               These low-profile sneakers are your perfect casual wear companion. Featuring a
-               durable rubber outer sole, they’ll withstand everything the weather can offer.
-            </p>
-            <div class="producto__precio">
-               <div>
-                  <span class="producto__precioAct">$125.00</span>
-                  <span class="producto__descuento">50%</span>
-               </div>
-               <span class="producto__precAnterior">$250.00</span>
-            </div>
-            <div class="cantidad__container">
-               <div class="producto__cantidad">
-                  <div>
-                     <img class="producto__cantidad--minus" src="./images/icon-minus.svg" alt="" />
-                  </div>
-                  <span>0</span>
-                  <div>
-                     <img class="producto__cantidad--plus" src="./images/icon-plus.svg" alt="" />
-                  </div>
-               </div>
-               <button class="producto__boton">
-                  <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+            <div class="header__derecha">
+               <div class="header__carrito">
+                  <svg
+                     class="cartt"
+                     id="carrito"
+                     width="22"
+                     height="20"
+                     xmlns="http://www.w3.org/2000/svg"
+                  >
                      <path
                         d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
-                        fill="#ffffff"
+                        fill="#69707D"
                         fill-rule="nonzero"
+                        id="path"
                      />
                   </svg>
-                  <span>Add to cart</span>
-               </button>
+                  <div class="header__carrito__num">0</div>
+               </div>
+               <img
+                  class="header__profile"
+                  src="./images/image-avatar.png"
+                  alt="Imagen de Perfil"
+               />
             </div>
-         </div>
-      </main>
-
-      <!-- Collections
-  Men
-  Women
-  About
-  Contact-->
+         </header>
+         <aside class="carrito" id="aside">
+            <div id="carrito-inner" class="carrito-inner">
+               <div class="cart">Cart</div>
+               <section class="carrito__info" id="prodCarr__container"></section>
+               <div class="btn">
+                  <button class="producto__boton">
+                     <span>Checkout</span>
+                  </button>
+               </div>
+            </div>
+         </aside>
+         <main class="producto">
+            <div class="carrousel">
+               <img class="carrousel__img active" src="./images/image-product-1.jpg" alt="" />
+               <img class="carrousel__img" src="./images/image-product-2.jpg" alt="" />
+               <img class="carrousel__img" src="./images/image-product-3.jpg" alt="" />
+               <img class="carrousel__img" src="./images/image-product-4.jpg" alt="" />
+               <div class="carrousel__controls">
+                  <div id="carrousel__prev">
+                     <img class="carrousel__boton" src="./images/icon-previous.svg" alt="" />
+                  </div>
+                  <div id="carrousel__next">
+                     <img class="carrousel__boton" src="./images/icon-next.svg" alt="" />
+                  </div>
+               </div>
+            </div>
+            <article class="producto__info">
+               <span class="producto__company">Sneaker Company</span>
+               <h1 class="producto__title">Fall Limited Edition Sneakers</h1>
+               <p class="producto__desc">
+                  These low-profile sneakers are your perfect casual wear companion. Featuring a
+                  durable rubber outer sole, they’ll withstand everything the weather can offer.
+               </p>
+               <div class="producto__precio">
+                  <div>
+                     <span class="producto__precioAct">$125.00</span>
+                     <span class="producto__descuento">50%</span>
+                  </div>
+                  <span class="producto__precAnterior">$250.00</span>
+               </div>
+               <div class="cantidad__container">
+                  <div class="producto__cantidad">
+                     <div>
+                        <img
+                           class="producto__cantidad--minus"
+                           id="minCantidad"
+                           src="./images/icon-minus.svg"
+                           alt=""
+                        />
+                     </div>
+                     <span id="cantidad">0</span>
+                     <div>
+                        <img
+                           class="producto__cantidad--plus"
+                           id="plusCantidad"
+                           src="./images/icon-plus.svg"
+                           alt=""
+                        />
+                     </div>
+                  </div>
+                  <button id="addToCart" class="producto__boton">
+                     <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                           d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+                           fill="#ffffff"
+                           fill-rule="nonzero"
+                        />
+                     </svg>
+                     <span>Add to cart</span>
+                  </button>
+               </div>
+            </article>
+         </main>
+      </div>
 
       <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
