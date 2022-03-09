@@ -16,6 +16,8 @@ const headerCantidad = document.querySelector('.header__carrito__num');
 const btnAddToCart = document.getElementById('addToCart');
 const prod__container = document.getElementById('prodCarr__container');
 const btn = document.querySelector('.btn');
+const imagenGaleria = document.querySelector('.gallery__big');
+const imagenesGaleria = document.querySelectorAll('.gallery__img');
 
 let slide = 0;
 let contCantidad = 0;
@@ -75,6 +77,25 @@ minCantidad.addEventListener('click', () => {
 btnAddToCart.addEventListener('click', () => {
    addToCart();
 });
+
+imagenesGaleria.forEach((i) => {
+   i.addEventListener('click', () => {
+      imagenesGaleria.forEach((ig) => {
+         ig.classList.remove('gallery__active');
+         ig.parentNode.classList.remove('gallery__border');
+      });
+      i.classList.add('gallery__active');
+      i.parentNode.classList.add('gallery__border');
+      let ruta = i.getAttribute('src');
+      let rutaCortada = ruta.slice(0, ruta.length - 14);
+      let rutaFinal = rutaCortada + '.jpg';
+      imagenGaleria.setAttribute('src', `${rutaFinal}`);
+   });
+});
+
+// imagenesGaleria.addEventListener('click', () => {
+//    // let ruta = imagenesGaleria.getAttribute('src');
+// });
 
 function actualizarCantidad(cant) {
    cantidad.innerHTML = cant;
