@@ -1,6 +1,6 @@
 const carrousel = document.querySelectorAll('.carrousel__img');
-const carrouselPrev = document.getElementById('carrousel__prev');
-const carrouselNext = document.getElementById('carrousel__next');
+const carrouselPrev = document.querySelector('.carrousel__prev');
+const carrouselNext = document.querySelector('.carrousel__next');
 const hamb = document.getElementById('header__hamb');
 const hamb_close = document.getElementById('mobile__close');
 const mobile_wrapper = document.getElementById('mobile__wrapper');
@@ -92,6 +92,8 @@ imagenesGaleria.forEach((i) => {
       imagenGaleria.setAttribute('src', `${rutaFinal}`);
    });
 });
+
+imagenGaleria.addEventListener('click', () => {});
 
 // imagenesGaleria.addEventListener('click', () => {
 //    // let ruta = imagenesGaleria.getAttribute('src');

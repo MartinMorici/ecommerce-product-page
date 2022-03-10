@@ -22,6 +22,11 @@ body {
   display: none;
 }
 
+.attribution {
+  text-align: center;
+  padding: 1rem;
+}
+
 .carrito {
   position: absolute;
   z-index: 2;
@@ -222,6 +227,10 @@ body {
   border-radius: 10px;
 }
 
+.delete {
+  cursor: pointer;
+}
+
 .producto {
   max-width: 650px;
   margin: 0 auto;
@@ -401,6 +410,7 @@ body {
   align-items: center;
   box-shadow: rgba(255, 125, 26, 0.787) 0px 18px 25px -10px;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .producto__boton:hover {
@@ -414,6 +424,11 @@ body {
   font-family: inherit;
   position: relative;
   bottom: -2px;
+}
+
+.producto__boton:active {
+  transform: scale(1.1);
+  transition: 0.2s;
 }
 
 @media only screen and (min-width: 1305px) {
@@ -442,7 +457,7 @@ body {
   .producto {
     max-width: none;
     display: flex;
-    min-height: calc(100vh - 129px);
+    min-height: calc(100vh - 181px);
     justify-content: center;
     align-items: center;
     padding: 4rem;
